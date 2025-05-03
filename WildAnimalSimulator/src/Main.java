@@ -1,24 +1,40 @@
+import animals.*;
+
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
 
-        String animal = args[1];
-        switch(animal.toUpperCase()) {
-            case "B":
-                System.out.println("Bird");
-                // other logic
+        Random animalGenerator = new Random(42);
+        for (int i = 0; i < 7; i++) {
 
-            case "F":
-                System.out.println("Frog");
+            int nextChar = animalGenerator.nextInt();
+            String animal = "B";
 
-            case "M":
-                System.out.println("mouse");
+            // loop the above.
 
-            case "T":
-                System.out.println("turtle");
+            switch(animal) {
+                case "B":
+                    System.out.println("Bird");
+                    Bird bird = new Bird();
+                    // other logic
 
-            case "W":
-                System.out.println("wolf");
+                case "F":
+                    System.out.println("Frog");
+                    Frog frog = new Frog();
+
+                case "M":
+                    System.out.println("mouse");
+                    Mouse mouse = new Mouse();
+
+                case "T":
+                    System.out.println("turtle");
+                    Turtle turtle = new Turtle();
+
+                case "W":
+                    System.out.println("wolf");
+                    Wolf wolf = new Wolf();
+            }
         }
-
     }
 }
