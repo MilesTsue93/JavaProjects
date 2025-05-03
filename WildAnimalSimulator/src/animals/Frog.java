@@ -1,4 +1,4 @@
 package animals;
 
-public class Frog {
+public class Frog extends Animal {
 }

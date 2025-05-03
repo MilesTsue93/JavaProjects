@@ -1,4 +1,4 @@
 package animals;
 
-public class Mouse {
+public class Mouse extends Animal {
 }
